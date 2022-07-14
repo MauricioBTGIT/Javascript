@@ -1,4 +1,3 @@
-<script>
 var subjectObject = {
   "Front-end": {
     "HTML": ["Links", "Images", "Tables", "Lists"],
@@ -36,4 +35,3 @@ window.onload = function() {
     }
   }
 }
-</script>
