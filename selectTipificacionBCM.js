@@ -1,4 +1,3 @@
-
 function validataifExists(dropdown, value){
   for(var i=0;i<dropdown.length; i++){
       if (dropdown.options[i].value === value ){
@@ -8,9 +7,6 @@ function validataifExists(dropdown, value){
   }
   return false;
 }
-
-//var token="7ABF58C394DE49FD9FD2AB69D6FB2BD0"
-//var url="https://belltech.teamdesk.net/secure/api/v2/67850/CXONE/select.json"
 
 var token="F97E228F66F447C2A3F1AC8F3BDE0532"
 var url="https://bcm.belltech.la/secure/api/v2/88709/CFGTIPIFICACION/select.json"
