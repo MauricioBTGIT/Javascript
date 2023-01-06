@@ -38,6 +38,7 @@ function dynamicallyLoadScript2(url) {
 
 var myPrettyCode = function() {
    // Here, do whatever you want
+	alert('myPrettyCode');
 };
 
 function validataifExists(dropdown, value) {
@@ -122,11 +123,12 @@ window.onload = function() {
 		//dynamicallyLoadScript('https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js');
 		//dynamicallyLoadScript('https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js', myPrettyCode);
 		
-		dynamicallyLoadScript2('https://code.jquery.com/jquery-1.11.0.min.js');
+		//dynamicallyLoadScript2('https://code.jquery.com/jquery-1.11.0.min.js');
+		dynamicallyLoadScript1('https://code.jquery.com/jquery-1.11.0.min.js', myPrettyCode);
 		
 		$.ajax({
 		type: 'GET',
-		url: 'https://web.dev/learn/',
+		url: 'https://www.google.cl',
 		success: function(response) {
 			alert(response);
 		}
