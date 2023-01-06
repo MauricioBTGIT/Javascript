@@ -70,6 +70,10 @@ window.onload = function() {
 
 
     alert('en blanco');
-  
+	
+    $.get(url, function (data, status){
+       console.log('${data}')
+   });
+  alert('done')
 }
 
