@@ -71,10 +71,10 @@ window.onload = function() {
 	getJSON(url,
 	function(err, data) {
 	  if (err !== null) {
-		alert('Something went wrong: ' + err);
+		//alert('Something went wrong: ' + err);
 	  } else {
 		//alert('Your query count: ' + data);
-		alert('Your query as string: ' + JSON.stringify(data));
+		//alert('Your query as string: ' + JSON.stringify(data));
 		//console.log(data)
 		
 		
