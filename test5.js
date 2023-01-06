@@ -75,66 +75,6 @@ window.onload = function() {
 		//alert('Something went wrong: ' + err);
 	  } else {
 		//ordenamos por campo
-		const result = data.sort((a, b) => {
-			  
-			  var columna1a = null;
-			  var columna2a = null;
-			  var columna3a = null;
-			  var columna4a = null;
-			  var columna5a = null;
-
-			  var columna1b = null;
-			  var columna2b = null;
-			  var columna3b = null;
-			  var columna4b = null;
-			  var columna5b = null;
-			  
-			  
-			  if (a.TIPIFICACION_NIVEL1 !== null){
-				columna1a = a.TIPIFICACION_NIVEL1.toUpperCase(); // ignore upper and lowercase
-				}
-			  if (b.TIPIFICACION_NIVEL1 !== null){
-				columna1b = b.TIPIFICACION_NIVEL1.toUpperCase(); // ignore upper and lowercase
-				}
-			  
-			  if (a.TIPIFICACION_NIVEL2 !== null){
-				columna2a = a.TIPIFICACION_NIVEL2.toUpperCase(); // ignore upper and lowercase
-				}
-			  if (b.TIPIFICACION_NIVEL2 !== null){
-			    columna2b = b.TIPIFICACION_NIVEL2.toUpperCase(); // ignore upper and lowercase
-				}
-			  
-			  if (a.TIPIFICACION_NIVEL3 !== null){
-				columna3a = a.TIPIFICACION_NIVEL3.toUpperCase(); // ignore upper and lowercase
-				}
-			  if (b.TIPIFICACION_NIVEL3 !== null){
-				columna3b = b.TIPIFICACION_NIVEL3.toUpperCase(); // ignore upper and lowercase
-				}
-			  
-			  if (a.TIPIFICACION_NIVEL4 !== null){
-				columna4a = a.TIPIFICACION_NIVEL4.toUpperCase(); // ignore upper and lowercase
-				}
-			  if (b.TIPIFICACION_NIVEL4 !== null){
-				columna4b = b.TIPIFICACION_NIVEL4.toUpperCase(); // ignore upper and lowercase
-				}
-			  
-			  if (a.TIPIFICACION_NIVEL5 !== null){
-				columna5a = a.TIPIFICACION_NIVEL5.toUpperCase(); // ignore upper and lowercase
-				}
-			  if (b.TIPIFICACION_NIVEL5 !== null){
-			    columna5b = b.TIPIFICACION_NIVEL5.toUpperCase(); // ignore upper and lowercase
-				}
-			  
-			  if (columna1a+columna2a+columna3a+columna4a+columna5a < columna1b+columna2b+columna3b+columna4b+columna5b) {
-				return -1;
-			  }
-			  if (columna1a+columna2a+columna3a+columna4a+columna5a > columna1b+columna2b+columna3b+columna4b+columna5b) {
-				return 1;
-			  }
-
-			  // names must be equal
-			  return 0;
-			});
 			
 		retornoBCM = data;
 
