@@ -39,6 +39,46 @@ function dynamicallyLoadScript2(url) {
 var myPrettyCode = function() {
    // Here, do whatever you want
 	alert('myPrettyCode');
+	
+	$.ajax({
+		type: 'GET',
+		url: 'https://www.google.cl',
+		success: function(response) {
+			alert(response);
+		}
+		}).fail( function( jqXHR, textStatus, errorThrown ) {
+
+		  if (jqXHR.status === 0) {
+
+		    alert('Not connect: Verify Network.');
+
+		  } else if (jqXHR.status == 404) {
+
+		    alert('Requested page not found [404]');
+
+		  } else if (jqXHR.status == 500) {
+
+		    alert('Internal Server Error [500].');
+
+		  } else if (textStatus === 'parsererror') {
+
+		    alert('Requested JSON parse failed.');
+
+		  } else if (textStatus === 'timeout') {
+
+		    alert('Time out error.');
+
+		  } else if (textStatus === 'abort') {
+
+		    alert('Ajax request aborted.');
+
+		  } else {
+
+		    alert('Uncaught Error: ' + jqXHR.responseText);
+
+		  }
+
+	});;
 };
 
 function validataifExists(dropdown, value) {
@@ -126,45 +166,7 @@ window.onload = function() {
 		//dynamicallyLoadScript2('https://code.jquery.com/jquery-1.11.0.min.js');
 		dynamicallyLoadScript('https://code.jquery.com/jquery-1.11.0.min.js', myPrettyCode);
 		
-		$.ajax({
-		type: 'GET',
-		url: 'https://www.google.cl',
-		success: function(response) {
-			alert(response);
-		}
-		}).fail( function( jqXHR, textStatus, errorThrown ) {
-
-		  if (jqXHR.status === 0) {
-
-		    alert('Not connect: Verify Network.');
-
-		  } else if (jqXHR.status == 404) {
-
-		    alert('Requested page not found [404]');
-
-		  } else if (jqXHR.status == 500) {
-
-		    alert('Internal Server Error [500].');
-
-		  } else if (textStatus === 'parsererror') {
-
-		    alert('Requested JSON parse failed.');
-
-		  } else if (textStatus === 'timeout') {
-
-		    alert('Time out error.');
-
-		  } else if (textStatus === 'abort') {
-
-		    alert('Ajax request aborted.');
-
-		  } else {
-
-		    alert('Uncaught Error: ' + jqXHR.responseText);
-
-		  }
-
-});;
+		
 		
 		//xhr.overrideMimeType("application/json");
 		var tmpURL = url;
