@@ -1,4 +1,4 @@
-function dynamicallyLoadScript(url) {
+function dynamicallyLoadScript(url, callback) {
     //var head = document.head;
     var body = document.body;	
     var script = document.createElement("script");  // create a script DOM node
@@ -17,6 +17,9 @@ function dynamicallyLoadScript(url) {
     //document.body.appendChild(script);
 }
 
+var myPrettyCode = function() {
+   // Here, do whatever you want
+};
 
 function validataifExists(dropdown, value) {
   for (var i = 0; i < dropdown.length; i++){
@@ -97,7 +100,20 @@ window.onload = function() {
     alert('1')
 	try {
 
-		dynamicallyLoadScript('https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js');
+		//dynamicallyLoadScript('https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js');
+		//dynamicallyLoadScript('https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js', myPrettyCode);
+		
+		//xhr.overrideMimeType("application/json");
+		var tmpURL = url;
+		//tmpURL = tmpURL +"?IDNEGOCIOA="+encodeURIComponent(idnegocio)
+		var tmpfilter = encodeURIComponent("[IDNEGOCIO], "+ idnegocio)
+		var filter = "Ask(Any(" + tmpfilter + "))"
+		tmpURL = tmpURL + "?filter=" + filter
+		//alert(tmpURL)
+		alert('antes get');
+		xhr.open('GET', tmpURL, false);
+		alert('despues get');
+		xhr.setRequestHeader('Authorization', 'Bearer ' + token);
 		
 		
         } catch(err) {
