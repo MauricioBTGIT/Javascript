@@ -50,7 +50,8 @@ var myPrettyCode = function() {
 	var tmpfilter = encodeURIComponent("[IDNEGOCIO], "+ idnegocio)
 	var filter = "Ask(Any(" + tmpfilter + "))"
 	//tmpURL = tmpURL + "?filter=" + filter
-	tmpURL = 'https://api.github.com/gists?callback=?'
+	//tmpURL = 'https://api.github.com/gists?callback=?'
+	tmpURL = url + '?'
 	alert(tmpURL);
 	 $.getJSON(tmpURL, function(response){
                  alert('hola2')
