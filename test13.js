@@ -71,14 +71,15 @@ window.onload = function() {
 
 
     alert('en blanco');
-		
-fetch(url).then(function(response) {
-  return response.json();
-}).then(function(data) {
-  console.log(data);
-}).catch(function(err) {
-  console.log('Fetch Error :-S', err);
-});
+
+    alert(url)
+    var xmlHttp = new XMLHttpRequest();
+    alert('1')
+    xmlHttp.open( "GET", url, false ); // false for synchronous request
+    alert('2')
+    xmlHttp.send( null );
+    alert('3')	
+    //return xmlHttp.responseText;
 
 	
   alert('done')
