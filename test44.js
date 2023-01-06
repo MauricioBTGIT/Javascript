@@ -40,11 +40,11 @@ var myPrettyCode = function() {
    // Here, do whatever you want
 	alert('myPrettyCode');
 	
-	$.get(url, function (data, status){
+	/*$.get(url, function (data, status){
    		//console.log('${data}')
 		alert('hola1')
 		alert('${data}')
-	});
+	});*/
 	
 	var tmpURL = url;
 	//tmpURL = tmpURL +"?IDNEGOCIOA="+encodeURIComponent(idnegocio)
@@ -54,7 +54,7 @@ var myPrettyCode = function() {
 	//tmpURL = 'https://api.github.com/gists?callback=?'
 	 $.getJSON(tmpURL, function(response){
                  alert('hola2')
-		 alert(response)  
+		 alert(response.data)  
 		 /* $.each(response.data, function(i, gist){
                         alert('hola');
                     });*/
