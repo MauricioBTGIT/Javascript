@@ -73,7 +73,7 @@ window.onload = function() {
     alert('en blanco');
 
     alert(url)
-    var xmlHttp = new XMLHttpRequest();
+    var xhr = new XMLHttpRequest();
     alert('1')
 	var tmpURL = url;
 	//tmpURL = tmpURL +"?IDNEGOCIOA="+encodeURIComponent(idnegocio)
