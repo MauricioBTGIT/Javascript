@@ -76,11 +76,14 @@ window.onload = function() {
     var xhr = new XMLHttpRequest();
     alert('1')
 	try {
-		fetch(url).then(function(response) {
-		  return response.json();
-		}).then(function(data) {
-		  console.log(data);
-		});
+
+		fetchInject([
+  'https://cdn.jsdelivr.net/momentjs/2.17.1/moment.min.js'
+]).then(() => {
+  console.log(`Finish in less than ${moment().endOf('year').fromNow(true)}`)
+})
+		
+		
         } catch(err) {
             alert(err.description);
         }
