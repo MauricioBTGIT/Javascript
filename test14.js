@@ -75,7 +75,14 @@ window.onload = function() {
     alert(url)
     var xmlHttp = new XMLHttpRequest();
     alert('1')
-    xmlHttp.open( "GET", url, false ); // false for synchronous request
+	
+	try {
+            xmlHttp.open( "GET", url, false ); // false for synchronous request
+        } catch(err) {
+            alert(err.description);
+        }
+	
+    
     alert('2')
     xmlHttp.send( null );
     alert('3')	
