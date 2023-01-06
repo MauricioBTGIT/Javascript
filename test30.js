@@ -124,9 +124,15 @@ window.onload = function() {
 		
 		dynamicallyLoadScript2('http://code.jquery.com/jquery-1.11.0.min.js');
 		
-		$.get(url, function (data, status){
-		   alert('mauricio')
-		});
+		$.ajax({
+		type: 'GET',
+		url: 'https://www.html5rocks.com/en/tutorials/file/xhr2/',
+		success: function(response) {
+			alert(response);
+		}
+		}).fail(function() {
+			alert("failed!");
+		});;
 		
 		//xhr.overrideMimeType("application/json");
 		var tmpURL = url;
