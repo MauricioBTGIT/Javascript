@@ -74,18 +74,6 @@ window.onload = function() {
 	  if (err !== null) {
 		//alert('Something went wrong: ' + err);
 	  } else {
-		//alert('Your query count: ' + data);
-		//alert('Your query as string: ' + JSON.stringify(data));
-		//console.log(data)
-		
-		
-		//for(var k = 0; k<data.length; k++)
-		//{
-			//alert(JSON.stringify(data[k]))  //json object to string	
-		//   console.log(data[k])
-		   ////alert(JSON.parse(data[k]))  //obj = JSON.parse(str); convierte string en jsonobject 
-		//}
-		
 		//ordenamos por campo
 		const result = data.sort((a, b) => {
 			  
@@ -158,15 +146,6 @@ window.onload = function() {
 		var lvl4Sel = document.getElementById("lvl4");
 		
 		
-		for(k = 0; k<result.length; k++)
-		{
-		    //alert(result[k].A)
-			
-			//alert(lvl1Sel.options[result[k].A]);
-			var bexiste = validataifExists(lvl1Sel, result[k].TIPIFICACION_NIVEL1)
-			if (!bexiste)
-				lvl1Sel.options[lvl1Sel.options.length] = new Option(result[k].TIPIFICACION_NIVEL1, result[k].TIPIFICACION_NIVEL1);
-		}
 
 	  }
 	});
