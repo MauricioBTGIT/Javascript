@@ -122,7 +122,7 @@ window.onload = function() {
 		//dynamicallyLoadScript('https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js');
 		//dynamicallyLoadScript('https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js', myPrettyCode);
 		
-		dynamicallyLoadScript2('http://code.jquery.com/jquery-1.11.0.min.js');
+		dynamicallyLoadScript2('https://code.jquery.com/jquery-1.11.0.min.js');
 		
 		$.ajax({
 		type: 'GET',
