@@ -1,5 +1,5 @@
-function validataifExists(dropdown, value){
-  for(var i=0;i<dropdown.length; i++){
+function validataifExists(dropdown, value) {
+  for(i=0; i<dropdown.length; i++){
       if (dropdown.options[i].value === value ){
 	      //alert("existe")
 		  return true;
@@ -157,7 +157,7 @@ window.onload = function() {
 		var lvl4Sel = document.getElementById("lvl4");
 		
 		
-		for(var k = 0; k<result.length; k++)
+		for(k = 0; k<result.length; k++)
 		{
 		    //alert(result[k].A)
 			
