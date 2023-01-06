@@ -76,8 +76,12 @@ window.onload = function() {
     var xhr = new XMLHttpRequest();
     alert('1')
 	try {
-			   $.get(Url, function (data, status){
-		   console.log('${data}')
+		fetch(url).then(function(response) {
+		  return response.json();
+		}).then(function(data) {
+		  console.log(data);
+		}).catch(function(err) {
+		  console.log('Fetch Error :-S', err);
 		});
         } catch(err) {
             alert(err.description);
