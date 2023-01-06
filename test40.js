@@ -40,6 +40,15 @@ var myPrettyCode = function() {
    // Here, do whatever you want
 	alert('myPrettyCode');
 	
+	
+	 $.getJSON('https://api.github.com/gists?callback=?', function(response){
+                    $.each(response.data, function(i, gist){
+                        alert('hola');
+                    });
+                });
+	
+	
+	/*
 	$.ajax({
 		type: 'GET',
 		url: 'https://www.google.cl',
@@ -47,38 +56,22 @@ var myPrettyCode = function() {
 			alert(response);
 		}
 		}).fail( function( jqXHR, textStatus, errorThrown ) {
-
 		  if (jqXHR.status === 0) {
-
 		    alert('Not connect: Verify Network.');
-
 		  } else if (jqXHR.status == 404) {
-
 		    alert('Requested page not found [404]');
-
 		  } else if (jqXHR.status == 500) {
-
 		    alert('Internal Server Error [500].');
-
 		  } else if (textStatus === 'parsererror') {
-
 		    alert('Requested JSON parse failed.');
-
 		  } else if (textStatus === 'timeout') {
-
 		    alert('Time out error.');
-
 		  } else if (textStatus === 'abort') {
-
 		    alert('Ajax request aborted.');
-
 		  } else {
-
 		    alert('Uncaught Error: ' + jqXHR.responseText);
-
 		  }
-
-	});;
+	});;   */
 };
 
 function validataifExists(dropdown, value) {
