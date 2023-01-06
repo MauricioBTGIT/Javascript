@@ -42,11 +42,13 @@ var myPrettyCode = function() {
 	
 	$.get(url, function (data, status){
    		//console.log('${data}')
+		alert('hola1')
 		alert('${data}')
 	});
 	
 	 $.getJSON('https://api.github.com/gists?callback=?', function(response){
-                 alert(response)  
+                 alert('hola2')
+		 alert(response)  
 		 /* $.each(response.data, function(i, gist){
                         alert('hola');
                     });*/
