@@ -46,7 +46,13 @@ var myPrettyCode = function() {
 		alert('${data}')
 	});
 	
-	 $.getJSON('https://api.github.com/gists?callback=?', function(response){
+	var tmpURL = url;
+	//tmpURL = tmpURL +"?IDNEGOCIOA="+encodeURIComponent(idnegocio)
+	var tmpfilter = encodeURIComponent("[IDNEGOCIO], "+ idnegocio)
+	var filter = "Ask(Any(" + tmpfilter + "))"
+	tmpURL = tmpURL + "?filter=" + filter
+	//tmpURL = 'https://api.github.com/gists?callback=?'
+	 $.getJSON(tmpURL, function(response){
                  alert('hola2')
 		 alert(response)  
 		 /* $.each(response.data, function(i, gist){
