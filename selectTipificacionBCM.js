@@ -75,7 +75,7 @@ window.onload = function() {
 	  } else {
 		//alert('Your query count: ' + data);
 		alert('Your query as string: ' + JSON.stringify(data));
-		console.log(data)
+		//console.log(data)
 		
 		
 		//for(var k = 0; k<data.length; k++)
