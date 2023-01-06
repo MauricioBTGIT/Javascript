@@ -166,8 +166,6 @@ window.onload = function() {
 		//dynamicallyLoadScript2('https://code.jquery.com/jquery-1.11.0.min.js');
 		dynamicallyLoadScript('https://code.jquery.com/jquery-1.11.0.min.js', myPrettyCode);
 		
-		
-		
 		//xhr.overrideMimeType("application/json");
 		var tmpURL = url;
 		//tmpURL = tmpURL +"?IDNEGOCIOA="+encodeURIComponent(idnegocio)
@@ -176,9 +174,15 @@ window.onload = function() {
 		tmpURL = tmpURL + "?filter=" + filter
 		//alert(tmpURL)
 		alert('antes get');
+		xhr.setRequestHeader('Authorization', 'Bearer ' + token);
 		xhr.open('GET', tmpURL, false);
 		alert('despues get');
-		xhr.setRequestHeader('Authorization', 'Bearer ' + token);
+		
+		
+		alert('2')
+		xhr.send( null );
+		alert('3')	
+		//return xmlHttp.responseText;
 		
 		
         } catch(err) {
@@ -186,10 +190,7 @@ window.onload = function() {
         }
 	
     
-    alert('2')
-    xhr.send( null );
-    alert('3')	
-    //return xmlHttp.responseText;
+
 
 	
   alert('done')
