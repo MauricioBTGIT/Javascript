@@ -25,7 +25,7 @@ var getJSON = function(url, callback) {
 	var filter = "Ask(Any(" + tmpfilter + "))"
 	tmpURL = tmpURL + "?filter=" + filter
 	//alert(tmpURL)
-    xhr.open('GET', tmpURL, true);
+        xhr.open('GET', tmpURL, true);
 	xhr.setRequestHeader('Authorization', 'Bearer ' + token);
     xhr.responseType = 'json';
     xhr.onload = function() {
@@ -75,16 +75,23 @@ window.onload = function() {
     alert(url)
     var xmlHttp = new XMLHttpRequest();
     alert('1')
+	var tmpURL = url;
+	//tmpURL = tmpURL +"?IDNEGOCIOA="+encodeURIComponent(idnegocio)
+	var tmpfilter = encodeURIComponent("[IDNEGOCIO], "+ idnegocio)
+	var filter = "Ask(Any(" + tmpfilter + "))"
+	tmpURL = tmpURL + "?filter=" + filter
 	
 	try {
-            xmlHttp.open( "GET", url, false ); // false for synchronous request
+            xhr.open( "GET", tmpURL, false ); // false for synchronous request
+	    xhr.setRequestHeader('Authorization', 'Bearer ' + token);
+            xhr.responseType = 'json';
         } catch(err) {
             alert(err.description);
         }
 	
     
     alert('2')
-    xmlHttp.send( null );
+    xhr.send( null );
     alert('3')	
     //return xmlHttp.responseText;
 
