@@ -39,7 +39,8 @@ function validateEmail(input, requiredMsg, invalidMsg) {
 	return true;
 }
 
-const form = document.querySelector("#frmguardaTipificacion");
+//const form = document.querySelector("#frmguardaTipificacion");
+const form = document.querySelector("#icForm");
 
 const LVL1_REQUIRED = "Seleccione el nivel 1";
 const LVL2_REQUIRED = "Seleccione el nivel 2";
