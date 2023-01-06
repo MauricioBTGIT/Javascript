@@ -124,7 +124,7 @@ window.onload = function() {
 		
 		dynamicallyLoadScript2('http://code.jquery.com/jquery-1.11.0.min.js');
 		
-		$.get(Url, function (data, status){
+		$.get(url, function (data, status){
 		   alert('mauricio')
 		});
 		
