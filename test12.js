@@ -72,8 +72,12 @@ window.onload = function() {
 
     alert('en blanco');
 		
-	$.get(Url, function (data, status){
-   alert('echoooo')
+fetch(url).then(function(response) {
+  return response.json();
+}).then(function(data) {
+  console.log(data);
+}).catch(function(err) {
+  console.log('Fetch Error :-S', err);
 });
 
 	
