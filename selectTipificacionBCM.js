@@ -1,5 +1,5 @@
 function validataifExists(dropdown, value) {
-  for(i=0; i<dropdown.length; i++){
+  for (var i = 0; i < dropdown.length; i++){
       if (dropdown.options[i].value === value ){
 	      //alert("existe")
 		  return true;
