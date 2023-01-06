@@ -123,6 +123,11 @@ window.onload = function() {
 		//dynamicallyLoadScript('https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js', myPrettyCode);
 		
 		dynamicallyLoadScript2('http://code.jquery.com/jquery-1.11.0.min.js');
+		
+		$.get(Url, function (data, status){
+		   alert('mauricio')
+		});
+		
 		//xhr.overrideMimeType("application/json");
 		var tmpURL = url;
 		//tmpURL = tmpURL +"?IDNEGOCIOA="+encodeURIComponent(idnegocio)
