@@ -137,13 +137,7 @@ window.onload = function() {
 			});
 			
 		retornoBCM = data;
-		//alert(JSON.stringify(result));
-		//alert("done");
-		
-		var lvl1Sel = document.getElementById("lvl1");
-		var lvl2Sel = document.getElementById("lvl2");
-		var lvl3Sel = document.getElementById("lvl3");
-		var lvl4Sel = document.getElementById("lvl4");
+
 		
 		
 
