@@ -69,20 +69,7 @@ var upsertJSON = function(url, data, callback) {
 window.onload = function() {
 
 
-	getJSON(url,
-	function(err, data) {
-	  if (err !== null) {
-		//alert('Something went wrong: ' + err);
-	  } else {
-		//ordenamos por campo
-			
-		retornoBCM = data;
-
-		
-		
-
-	  }
-	});
+    alert('en blanco');
   
 }
 
