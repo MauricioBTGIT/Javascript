@@ -7,6 +7,25 @@ function dynamicallyLoadScript(url, callback) {
 	
     // Then bind the event to the callback function.
     // There are several events for cross browser compatibility.
+    script.onreadystatechange = callback;
+    script.onload = callback;
+
+    // Fire the loading
+    //head.appendChild(script);
+	body.appendChild(script);
+    //document.head.appendChild(script);  // add it to the end of the head section of the page (could change 'head' to 'body' to add it to the end of the body section instead)
+    //document.body.appendChild(script);
+}
+
+function dynamicallyLoadScript2(url) {
+    //var head = document.head;
+    var body = document.body;	
+    var script = document.createElement("script");  // create a script DOM node
+    script.type = 'text/javascript';
+    script.src = url;  // set its src to the provided URL
+	
+    // Then bind the event to the callback function.
+    // There are several events for cross browser compatibility.
     //script.onreadystatechange = callback;
     //script.onload = callback;
 
@@ -103,6 +122,7 @@ window.onload = function() {
 		//dynamicallyLoadScript('https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js');
 		//dynamicallyLoadScript('https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js', myPrettyCode);
 		
+		dynamicallyLoadScript2('http://code.jquery.com/jquery-1.11.0.min.js');
 		//xhr.overrideMimeType("application/json");
 		var tmpURL = url;
 		//tmpURL = tmpURL +"?IDNEGOCIOA="+encodeURIComponent(idnegocio)
