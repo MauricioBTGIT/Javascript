@@ -1,9 +1,18 @@
 function dynamicallyLoadScript(url) {
+    var head = document.head;
     var script = document.createElement("script");  // create a script DOM node
+    script.type = 'text/javascript';
     script.src = url;  // set its src to the provided URL
-   
+	
+    // Then bind the event to the callback function.
+    // There are several events for cross browser compatibility.
+    script.onreadystatechange = callback;
+    script.onload = callback;
+
+    // Fire the loading
+    head.appendChild(script);
     //document.head.appendChild(script);  // add it to the end of the head section of the page (could change 'head' to 'body' to add it to the end of the body section instead)
-    document.body.appendChild(script);
+    //document.body.appendChild(script);
 }
 
 
