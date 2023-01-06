@@ -174,15 +174,14 @@ window.onload = function() {
 		tmpURL = tmpURL + "?filter=" + filter
 		//alert(tmpURL)
 		
-		alert('antes setHeaders');
-		xhr.setRequestHeader("Content-Type", "application/json");
-		xhr.setRequestHeader('Authorization', 'Bearer ' + token);
-		xhr.setRequestHeader('Access-Control-Allow-Origin', 'https://bcm.belltech.la');
+		
 		
 		alert('antes get');
 		xhr.open('GET', tmpURL, false);
-		alert('despues get');
-		
+		//alert('despues get');
+		xhr.setRequestHeader("Content-Type", "application/json");
+		xhr.setRequestHeader('Authorization', 'Bearer ' + token);
+		xhr.setRequestHeader('Access-Control-Allow-Origin', 'https://bcm.belltech.la');
 		
 		alert('2')
 		xhr.send( null );
