@@ -57,7 +57,8 @@ form.addEventListener("submit", function (event) {
 	//let emailValid = validateEmail(form.elements["email"], EMAIL_REQUIRED, EMAIL_INVALID);
 	// if valid, submit the form.
 	if (lvl1Valid && lvl2Valid) {
-		alert("Datos validados. Se guardan en BCM");
+		//alert("Datos validados. Se guardan en BCM");
+		console.log("Datos validados. Se guardan en BCM");
 		
 		const jsonData = {
 		  IDNEGOCIO: idnegocio,
@@ -72,10 +73,11 @@ form.addEventListener("submit", function (event) {
 		upsertJSON(url, jsonData, 
 		function(err, data) {
 		  if (err !== null) {
-			alert('Something went wrong: ' + err);
+			//alert('Something went wrong: ' + err);
+			  console.log('error algo no resulto');
 		  } else {
 			//alert('Your query count: ' + data);
-			alert('Your query as string: ' + JSON.stringify(data));
+			//alert('Your query as string: ' + JSON.stringify(data));
 			console.log(data)
 			
 
