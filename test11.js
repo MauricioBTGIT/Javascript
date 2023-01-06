@@ -71,19 +71,10 @@ window.onload = function() {
 
 
     alert('en blanco');
-	
-getJSON(url,
-	function(err, data) {
-	  if (err !== null) {
-		//alert('Something went wrong: ' + err);
-	  } else {
-		//alert('Your query count: ' + data);
-		//alert('Your query as string: ' + JSON.stringify(data));
-		//console.log(data)
 		
-	$.get(url, function (data, status){
-   console.log('${data}')
-});	
+	$.get(Url, function (data, status){
+   alert('echoooo')
+});
 
 	
   alert('done')
