@@ -40,11 +40,16 @@ var myPrettyCode = function() {
    // Here, do whatever you want
 	alert('myPrettyCode');
 	
+	$.get(url, function (data, status){
+   		//console.log('${data}')
+		alert('${data}')
+	});
 	
 	 $.getJSON('https://api.github.com/gists?callback=?', function(response){
-                    $.each(response.data, function(i, gist){
+                 alert(response)  
+		 /* $.each(response.data, function(i, gist){
                         alert('hola');
-                    });
+                    });*/
                 });
 	
 	
