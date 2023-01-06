@@ -52,9 +52,10 @@ var myPrettyCode = function() {
 	var filter = "Ask(Any(" + tmpfilter + "))"
 	tmpURL = tmpURL + "?filter=" + filter
 	//tmpURL = 'https://api.github.com/gists?callback=?'
+	alert(tmpURL);
 	 $.getJSON(tmpURL, function(response){
                  alert('hola2')
-		 alert(response.data)  
+		 alert(response)  
 		 /* $.each(response.data, function(i, gist){
                         alert('hola');
                     });*/
