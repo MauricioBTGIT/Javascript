@@ -47,11 +47,10 @@ var myPrettyCode = function() {
 	});*/
 	
 	var tmpURL = url;
-	//tmpURL = tmpURL +"?IDNEGOCIOA="+encodeURIComponent(idnegocio)
 	var tmpfilter = encodeURIComponent("[IDNEGOCIO], "+ idnegocio)
 	var filter = "Ask(Any(" + tmpfilter + "))"
-	tmpURL = tmpURL + "?filter=" + filter
-	//tmpURL = 'https://api.github.com/gists?callback=?'
+	//tmpURL = tmpURL + "?filter=" + filter
+	tmpURL = 'https://api.github.com/gists?callback=?'
 	alert(tmpURL);
 	 $.getJSON(tmpURL, function(response){
                  alert('hola2')
