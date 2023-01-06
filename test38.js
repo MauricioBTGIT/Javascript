@@ -173,8 +173,13 @@ window.onload = function() {
 		var filter = "Ask(Any(" + tmpfilter + "))"
 		tmpURL = tmpURL + "?filter=" + filter
 		//alert(tmpURL)
-		alert('antes get');
+		
+		alert('antes setHeaders');
+		xhr.setRequestHeader("Content-Type", "application/json");
 		xhr.setRequestHeader('Authorization', 'Bearer ' + token);
+		xhr.setRequestHeader('Access-Control-Allow-Origin', 'https://bcm.belltech.la');
+		
+		alert('antes get');
 		xhr.open('GET', tmpURL, false);
 		alert('despues get');
 		
