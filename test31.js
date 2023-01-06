@@ -126,7 +126,7 @@ window.onload = function() {
 		
 		$.ajax({
 		type: 'GET',
-		url: 'https://www.html5rocks.com/en/tutorials/file/xhr2/',
+		url: 'https://web.dev/learn/',
 		success: function(response) {
 			alert(response);
 		}
