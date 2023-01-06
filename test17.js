@@ -75,16 +75,10 @@ window.onload = function() {
     alert(url)
     var xhr = new XMLHttpRequest();
     alert('1')
-	var tmpURL = url;
-	//tmpURL = tmpURL +"?IDNEGOCIOA="+encodeURIComponent(idnegocio)
-	var tmpfilter = encodeURIComponent("[IDNEGOCIO], "+ idnegocio)
-	var filter = "Ask(Any(" + tmpfilter + "))"
-	tmpURL = tmpURL + "?filter=" + filter
-	
 	try {
-            xhr.open( "GET", tmpURL, false ); // false for synchronous request
-	    xhr.setRequestHeader('Authorization', 'Bearer ' + token);
-            xhr.responseType = 'json';
+			   $.get(Url, function (data, status){
+		   console.log('${data}')
+		});
         } catch(err) {
             alert(err.description);
         }
